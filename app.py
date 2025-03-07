@@ -4,12 +4,12 @@ import requests
 from io import BytesIO
 import pandas as pd
 
+st.set_page_config(page_title='Photography Portfolio', page_icon='📷', layout='wide')
+
 # connect to google sheets
 conn = st.connection("gsheets", type=GSheetsConnection)
 app_data = conn.read()
 df = pd.DataFrame(app_data)
-
-st.set_page_config(page_title='Photography Portfolio', page_icon='📷', layout='wide')
 
 def get_image(url):
     response = requests.get(url)
@@ -119,8 +119,8 @@ def main():
             st.write('#')
 
             col4, col5, col6 = st.columns(3)
-            col4.link_button('LinkedIn', "https://www.linkedin.com/in/sarah-graddy/", use_container_width=True)
-            col5.link_button('GitHub', "https://github.com/sg00990", use_container_width=True)
+            col4.link_button('LinkedIn', "https://www.linkedin.com/in/sarah-graddy/", use_container_width=True, type="primary")
+            col5.link_button('GitHub', "https://github.com/sg00990", use_container_width=True, type="primary")
 
         col3.image('img/bkg1.png', use_container_width=True)
 
