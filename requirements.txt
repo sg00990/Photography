@@ -1,4 +1,4 @@
 hydralit
 pandas
-numpy.lib
+numpy
 git+https://github.com/streamlit/gsheets-connection
