@@ -9,7 +9,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 app_data = conn.read()
 df = pd.DataFrame(app_data)
 
-st.set_page_config(title='Photography Portfolio', page_icon='📷', layout='wide')
+st.set_page_config(page_title='Photography Portfolio', page_icon='📷', layout='wide')
 
 def get_image(url):
     response = requests.get(url)
